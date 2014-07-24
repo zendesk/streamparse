@@ -29,7 +29,7 @@ def main():
 
     Usage:
         sparse quickstart <project_name>
-        sparse run [-n <topology>] [-o <option>]... [-p <par>] [-t <time>] [-dv]
+        sparse run [-n <topology>] [-o <option>]... [-p <par>] [-t <time>]
         sparse submit [-n <topology>] [-o <option>]... [-p <par>] [-e <env>] [-dvf]
         sparse list [-e <env>] [-v]
         sparse kill [-n <topology>] [-e <env>] [-v]
@@ -79,7 +79,7 @@ def main():
         time = int(args["--time"])
         par = int(args["--par"])
         options = args["--option"]
-        run_local_topology(args["--name"], time, par, options, args["--debug"])
+        run_local_topology(args["--name"], time, par, options)
     elif args["list"]:
         list_topologies(args["--environment"])
     elif args["kill"]:
